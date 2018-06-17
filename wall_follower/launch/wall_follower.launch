@@ -1,6 +1,4 @@
-<!-- -->
 <launch>
 	<!-- rosrun waypoint_follower pure_pursuit -->
 	<node pkg="wall_follower" type="wall_follower" name="wall_follower" output="log" />
-
 </launch>
