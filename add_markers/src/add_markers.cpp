@@ -2,8 +2,8 @@
 #include <visualization_msgs/Marker.h>
 #include "nav_msgs/Odometry.h"
 
-bool objectPicked;
-bool objectDelivered;
+bool objectPicked = false;
+bool objectDelivered = false;
 
 void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
 {
@@ -26,7 +26,7 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
     objectDelivered = true;
   }
 
-  if (objectPicked == false || objectDelivered)
+  if ((objectPicked != true) || objectDelivered)
   {
     visualization_msgs::Marker marker;
     // Set the frame ID and timestamp.  See the TF tutorials for information on these.
