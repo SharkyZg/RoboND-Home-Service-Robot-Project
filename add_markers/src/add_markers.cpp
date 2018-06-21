@@ -46,7 +46,7 @@ int main( int argc, char** argv )
     // Set the color -- be sure to set alpha to something non-zero!
     marker.color.r = 0.0f;
     marker.color.g = 1.0f;
-    marker.color.b = 0.0f;
+    marker.color.b = 205.0f;
     marker.color.a = 1.0;
 
     marker.lifetime = ros::Duration();
