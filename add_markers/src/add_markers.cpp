@@ -22,7 +22,7 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
 
   if ((7.35 < x && x < 7.45) && ( -2.05 < y && y < -1.95))
   {
-    objectPicked = true;
+    objectDelivered = true;
   }
 
   if (!objectPicked || objectDelivered)
