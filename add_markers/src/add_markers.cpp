@@ -14,7 +14,7 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
   float x = msg->pose.pose.position.x;
   float y = msg->pose.pose.position.y;
   ROS_INFO("Position-> x: [%f], y: [%f], z: [%f]", x, y, msg->pose.pose.position.z);
-  ROS_INFO("%d\n", objectPicked);
+  ROS_INFO("Object picked: [%d]\n", objectPicked);
   if ((0.0 < x && x < 0.15) && (2.9 < y && y < 3.05))
   {
     objectPicked = true;
