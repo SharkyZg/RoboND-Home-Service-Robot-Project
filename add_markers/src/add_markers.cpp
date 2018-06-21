@@ -13,7 +13,7 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::Rate r(1);
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
-  ros::Subscriber sub = n.subscribe("odom", 1000, chatterCallback);
+  ros::Subscriber sub = n.subscribe("odom", 1000, checkPosition);
 
   bool objectPicked;
   bool objectDelivered;
