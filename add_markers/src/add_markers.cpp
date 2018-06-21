@@ -2,7 +2,7 @@
 #include <visualization_msgs/Marker.h>
 #include "nav_msgs/Odometry.h"
 
-bool objectPicked = true;
+bool objectPicked;
 bool objectDelivered;
 
 void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
