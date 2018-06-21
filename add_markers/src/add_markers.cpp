@@ -26,7 +26,7 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
     objectDelivered = true;
   }
 
-  if ((objectPicked != true) || objectDelivered)
+  if ((objectPicked != 1) || objectDelivered)
   {
     visualization_msgs::Marker marker;
     // Set the frame ID and timestamp.  See the TF tutorials for information on these.
