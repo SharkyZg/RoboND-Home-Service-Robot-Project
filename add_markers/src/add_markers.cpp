@@ -10,12 +10,16 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
   bool objectPicked;
   bool objectDelivered;
+  float x = msg->pose.pose.position.x;
+  float y = msg->pose.pose.position.y;
 
-  if (msg->pose.pose.position.x == 0.134 && msg->pose.pose.position.y == -2.12){
+  if ((0.04 < x && x < 0.05) && ( -2.25 < y && y < -2.2))
+  {
     objectPicked = true;
   }
 
-  if (msg->pose.pose.position.x == 8.3 && msg->pose.pose.position.y == -1.3){
+  if (msg->pose.pose.position.x == 8.3 && msg->pose.pose.position.y == -1.3)
+  {
     objectPicked = true;
   }
 
