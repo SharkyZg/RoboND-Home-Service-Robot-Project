@@ -2,7 +2,7 @@
 #include <visualization_msgs/Marker.h>
 #include "nav_msgs/Odometry.h"
 
-void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
+void checkPosition(const nav_msgs::Odometry::ConstPtr& msg)
 {
   ROS_WARN("Position-> x: [%f], y: [%f], z: [%f]", msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
 }
@@ -13,14 +13,13 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::Rate r(1);
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
+  ros::Subscriber sub = n.subscribe("odom", 1000, chatterCallback);
 
   bool objectPicked;
   bool objectDelivered;
 
   // Set our initial shape type to be a cube
   uint32_t shape = visualization_msgs::Marker::CUBE;
-
-  ros::Subscriber odom = n.subscribe("/odom", 10, checkPosition);
 
   while (ros::ok())
   {
