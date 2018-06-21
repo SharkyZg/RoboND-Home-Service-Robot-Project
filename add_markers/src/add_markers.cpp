@@ -19,10 +19,11 @@ int main(int argc, char **argv)
   bool objectPicked;
   bool objectDelivered;
 
-  ros::spin()
-  
+ 
   // Set our initial shape type to be a cube
   uint32_t shape = visualization_msgs::Marker::CUBE;
+
+  ros::spin();
 
   while (ros::ok())
   {
