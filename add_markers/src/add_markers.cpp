@@ -20,7 +20,7 @@ int main(int argc, char **argv)
   // Set our initial shape type to be a cube
   uint32_t shape = visualization_msgs::Marker::CUBE;
 
-  ros::Subscriber odom = n.subscribe("odom", 10, checkPosition);
+  ros::Subscriber odom = n.subscribe("/odom", 10, checkPosition);
 
   while (ros::ok())
   {
