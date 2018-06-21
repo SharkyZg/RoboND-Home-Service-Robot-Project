@@ -13,7 +13,7 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
   float x = msg->pose.pose.position.x;
   float y = msg->pose.pose.position.y;
 
-  if ((-0.05 < x && x < 0.05) && ( -2.3 < y && y < -2.2))
+  if ((-0.2 < x && x < 0.2) && ( -2.3 < y && y < -2))
   {
     objectPicked = true;
   }
