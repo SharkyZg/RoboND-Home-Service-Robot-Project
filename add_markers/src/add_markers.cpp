@@ -2,14 +2,16 @@
 #include <visualization_msgs/Marker.h>
 #include "nav_msgs/Odometry.h"
 
+bool objectPicked;
+bool objectDelivered;
+
 void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
 {
   ROS_INFO("Position-> x: [%f], y: [%f], z: [%f]", msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
   ros::Rate r(1);
   ros::NodeHandle n;
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
-  bool objectPicked;
-  bool objectDelivered;
+
   float x = msg->pose.pose.position.x;
   float y = msg->pose.pose.position.y;
 
