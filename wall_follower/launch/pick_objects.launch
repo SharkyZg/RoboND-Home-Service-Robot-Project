@@ -1,0 +1,4 @@
+<launch>
+	<!-- rosrun waypoint_follower pure_pursuit -->
+	<node pkg="pick_objects" type="pick_objects" name="pick_objects" output="screen" />
+</launch>
