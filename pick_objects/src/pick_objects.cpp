@@ -42,9 +42,8 @@ int main(int argc, char** argv){
     ROS_INFO("The base failed to reach the first goal for some reason");
 
   // Wait 5 sec
-  while(!ac.waitForServer(ros::Duration(5.0))){
-    ROS_INFO("Waiting for the robot to reach the second goal");
-  }
+  ROS_INFO("Waiting for the robot to reach the second goal");
+  usleep(5000000);
 
     // Define a position and orientation for the robot to reach
   goal.target_pose.pose.position.x = 8.3;
