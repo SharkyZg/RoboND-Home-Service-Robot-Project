@@ -39,14 +39,14 @@ int main( int argc, char** argv )
     marker.pose.orientation.w = 1.0;
 
     // Set the scale of the marker -- 1x1x1 here means 1m on a side
-    marker.scale.x = 1.0;
-    marker.scale.y = 1.0;
-    marker.scale.z = 1.0;
+    marker.scale.x = .1;
+    marker.scale.y = .1;
+    marker.scale.z = .1;
 
     // Set the color -- be sure to set alpha to something non-zero!
     marker.color.r = 0.0f;
-    marker.color.g = 1.0f;
-    marker.color.b = 0.0f;
+    marker.color.g = 0.0f;
+    marker.color.b = 205.0f;
     marker.color.a = 1.0;
 
     marker.lifetime = ros::Duration();
