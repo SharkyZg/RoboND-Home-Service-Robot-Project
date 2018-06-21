@@ -68,8 +68,8 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
 
 int main(int argc, char **argv)
 {
-  ros::NodeHandle p;
   ros::init(argc, argv, "add_markers");
+  ros::NodeHandle p;
   ros::Subscriber sub = p.subscribe("odom", 1000, checkPosition);
   ros::spin();
 }
