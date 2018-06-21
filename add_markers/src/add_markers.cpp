@@ -4,7 +4,7 @@
 
 void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
 {
-  ROS_INFO("Position-> x: [%f], y: [%f], z: [%f]", msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
+  ROS_WARN("Position-> x: [%f], y: [%f], z: [%f]", msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
 }
 
 int main(int argc, char **argv)
