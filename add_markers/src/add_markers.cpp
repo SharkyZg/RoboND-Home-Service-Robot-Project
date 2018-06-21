@@ -7,7 +7,7 @@ bool objectDelivered;
 
 void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
 {
-  
+
   ros::Rate r(1);
   ros::NodeHandle n;
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
@@ -15,13 +15,13 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
   float y = msg->pose.pose.position.y;
   ROS_INFO("Position-> x: [%f], y: [%f], z: [%f]", x, y, msg->pose.pose.position.z);
 
-  if ((0.05 < x && x < 0.15) && ( 2.95 < y && y < 3.2))
+  if ((0.05 < x && x < 0.15) && (2.95 < y && y < 3.05))
   {
     objectPicked = true;
   }
   //
 
-  if ((7.35 < x && x < 7.45) && ( -2.05 < y && y < -1.95))
+  if ((7.35 < x && x < 7.45) && (-2.05 < y && y < -1.95))
   {
     objectDelivered = true;
   }
