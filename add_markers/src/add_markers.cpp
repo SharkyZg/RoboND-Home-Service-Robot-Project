@@ -15,7 +15,7 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
   float y = msg->pose.pose.position.y;
   ROS_INFO("Position-> x: [%f], y: [%f], z: [%f]", x, y, msg->pose.pose.position.z);
 
-  if ((0.07 < x && x < 0.085) && ( -2.2 < y && y < -2.1))
+  if ((0.05 < x && x < 0.15) && ( 3.1 < y && y < 3.2))
   {
     objectPicked = true;
   }
@@ -53,8 +53,8 @@ void checkPosition(const nav_msgs::Odometry::ConstPtr &msg)
     }
     else
     {
-      marker.pose.position.x = 0.134;
-      marker.pose.position.y = -2.12;
+      marker.pose.position.x = 0.1;
+      marker.pose.position.y = 3.15;
     }
 
     marker.pose.position.z = 0;
